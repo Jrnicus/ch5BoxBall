@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.geom.*;
+import java.awt.Dimension;
 
 /**
  * Class BouncingBall - a graphical ball that observes the effect of gravity. The ball
@@ -49,6 +50,7 @@ public class BouncingBall
         diameter = ballDiameter;
         groundPosition = groundPos;
         canvas = drawingCanvas;
+        
     }
 
     /**
