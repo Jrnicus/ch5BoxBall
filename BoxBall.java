@@ -149,7 +149,6 @@ public class BoxBall
         }
         
         // check to see if it hitting the inner walls
-        // check if it hit the innerBottomWall or innerTopWall
         if(((yPosition <= innerBottomWall) && (yPosition >= (innerTopWall + diameter))) && 
         ((xPosition >= (innerLeftWall + diameter)) && (xPosition <= innerRightWall)))
         {
@@ -158,7 +157,7 @@ public class BoxBall
             int left = Math.abs(innerLeftWall - xPosition);
             int right =Math.abs(innerRightWall - xPosition);
             
-            if((bottom < left && bottom < right) || (top < left && top <right)) 
+            if((bottom < left && bottom < right) || (top < left && top < right)) 
             {
                 if(ySpeed < 0)
                 {
@@ -185,9 +184,6 @@ public class BoxBall
                 }
             }  
         }
-        // to make sure the box doesnt get chipped at all
-        //drawBox();
-        //drawInnerBox();
     }
 
 
@@ -280,5 +276,4 @@ public class BoxBall
         //top wall
         canvas.drawLine(innerLeftWall, innerTopWall, innerRightWall, innerTopWall);
     }
-
 }
